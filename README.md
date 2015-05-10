@@ -1,4 +1,4 @@
-# rhc-django
+# openshift-django
 My OpenShift Django template
 
   -   Python 3, Django 1.7, Grappelli
