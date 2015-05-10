@@ -78,4 +78,6 @@ USE_TZ = True
 
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.environ.get('OPENSHIFT_REPO_DIR', BASE_DIR)
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+if 'OPENSHIFT_REPO_DIR' in os.environ:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'wsgi', 'static')
